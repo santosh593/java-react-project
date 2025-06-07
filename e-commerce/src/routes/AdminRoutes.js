@@ -1,14 +1,15 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import AdminFormPage from "../components/Admin/AdminFormPage";
+// routes/AdminRoutes.js
+import Dashboard from '../pages/admin/dashboard/AdminDashboard';
+import Category from '../pages/admin/category/Category';
+import Product from '../pages/admin/product/AddProduct';
+import AdminLayout from '../layout/admin/AdminLayout';
 
-function AdminRoutes() {
-  return (
-    <Routes>
-      <Route path="/" element={<AdminFormPage />} />
-      {/* Add more admin routes here */}
-    </Routes>
-  );
-}
-
-export default AdminRoutes;
+export const adminRoutes = {
+  path: '/admin',
+  element: <AdminLayout />,
+  children: [
+    { path: '', element: <Dashboard /> },
+    { path: 'category', element: <Category /> },
+    { path: 'product', element: <Product /> },
+  ],
+};

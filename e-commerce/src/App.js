@@ -1,10 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// App.js
+import { BrowserRouter} from 'react-router-dom';
+import AppRoutes from './AppRoutes';
+
 
 
 function App() {
   return (
-   <div>aaaaaaaaaaaaa</div>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
 

@@ -1,14 +1,21 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import HomePage from "../components/Frontend/HomePage";
+// routes/FrontendRoutes.js
+import Home from '../pages/frontend/HomePage';
+import Product from '../pages/frontend/ProductDetail';
+import FrontendLayout from '../layout/Frontend/FrontendLayout';
+import Cart from '../pages/frontend/Cart';
+import ProductList from '../pages/frontend/ProductList';
+import Login from '../pages/frontend/Login';
+import Register from '../pages/frontend/Register';
 
-function FrontendRoutes() {
-  return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      {/* Add more frontend routes here */}
-    </Routes>
-  );
-}
-
-export default FrontendRoutes;
+export const frontendRoutes = {
+  path: '/',
+  element: <FrontendLayout />,
+  children: [
+    { path: '', element: <Home /> },
+    { path: 'product', element: <Product /> },
+    { path: 'cart', element: <Cart /> },
+    { path: 'productlist', element: <ProductList /> },
+    { path: 'login', element: <Login /> },
+    { path: 'register', element: <Register /> },
+  ],
+};
