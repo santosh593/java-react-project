@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './Admin.css';
 const Header = () => {
   return (
-    <div>
-      admin header
+    <div className='adminheader'>
+      <h2>Header Section</h2>
     </div>
   )
 }

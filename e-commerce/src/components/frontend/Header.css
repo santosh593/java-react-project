@@ -1,11 +1,8 @@
 .container {
-    display: flex
-;
+    display: flex;
     margin: auto;
     min-width: 100%;
     justify-content: space-around;
-    background: #000000;
-    color: white;
 }
 
 .nav-links ul {
@@ -17,7 +14,7 @@
 
 .nav-links ul li a {
     text-decoration: none;
-    color: white;
+       color: #151313;
 }
 
 .logo {
