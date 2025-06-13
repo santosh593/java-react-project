@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    margin: auto;
+    min-width: 100%;
+    justify-content: space-around;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style-type: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+       color: #151313;
+}
+
+.logo {
+    line-height: 3;
+}
+.social-icons {
+    line-height: 4;
+}
